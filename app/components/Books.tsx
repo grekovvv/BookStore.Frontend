@@ -14,7 +14,7 @@ export const Books = ({books, handleOpen, handleDelete}: Props) => {
                 <Card 
                     key={book.id} 
                     title = { <CardTitle title={book.title} price={book.price}/> }
-                    style={{backgroundColor: "#47b68fff"}}>
+                    style={{backgroundColor: "#4eb792ff"}}>
                     
                     <p>{book.description}</p>
                     <div className="card__buttons">
