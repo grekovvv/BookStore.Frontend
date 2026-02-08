@@ -1,6 +1,6 @@
 "use client";
 
-import Button from "antd/es/button/button";
+import { Button } from "antd";
 import { useEffect, useState } from "react";
 import { BookRequest, createBook, deleteBook, getAllBooks, updateBook } from "../Services/books";
 import { Books } from "../components/Books";
@@ -76,7 +76,11 @@ export default function BooksPage() {
         <Layout>
             <Content style={{ padding: '24px'}}>
                 <div>
-                    <Button type="primary" style={{ margin: "30px", fontSize:20}}>Добавить книгу</Button>
+                    <Button 
+                        type="primary" 
+                        style={{ margin: "30px", fontSize:20}}
+                        onClick={openModal}
+                        size="large">Добавить книгу</Button>
 
                     <CreateUpdateBook 
                         mode={mode} 

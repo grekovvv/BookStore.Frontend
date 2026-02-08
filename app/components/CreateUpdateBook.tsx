@@ -3,7 +3,6 @@ import { BookRequest } from "../Services/books";
 import { Input } from "antd";
 import { useEffect, useState } from "react";
 import TextArea from "antd/es/input/TextArea";
-import { basename } from "path";
 
 interface Props {
     mode: Mode;
@@ -41,7 +40,7 @@ export const CreateUpdateBook = ({
 
     // Methods
     const handleOk = async () => {
-        const booksRequest = {title, description, price};
+        const booksRequest = { title, description, price };
 
         mode == Mode.Create
             ? handleCreate(booksRequest)
@@ -51,7 +50,7 @@ export const CreateUpdateBook = ({
     
     return (
         <Modal 
-            title={mode === Mode.Create? "Добавить книгу" : "Редактировать книгу"} 
+            title={mode === Mode.Create ? "Добавить книгу" : "Редактировать книгу"} 
             open={isModalOpen} 
             cancelText={"Отмена"}
             onOk={handleOk}
